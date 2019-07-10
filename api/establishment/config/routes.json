@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/establishments",
+      "handler": "Establishment.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/establishments/count",
+      "handler": "Establishment.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/establishments/:_id",
+      "handler": "Establishment.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/establishments",
+      "handler": "Establishment.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/establishments/:_id",
+      "handler": "Establishment.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/establishments/:_id",
+      "handler": "Establishment.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

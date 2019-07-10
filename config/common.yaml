@@ -1,5 +1,0 @@
-version: 1.0.0
-log:
-  level: "ERROR"
-listen:
-  port: 3001
