@@ -1,0 +1,13 @@
+aws:
+    region: eu-west-1
+    secrets:
+        use: false
+        wallet: dev/api
+  
+jwt:
+    iss: 'localhost'
+    ttl:
+        login: 60
+
+app:
+    url: https://sfcdev.cloudapps.digital
