@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "appusers",
+  "info": {
+    "name": "appusers",
+    "description": "Main Application Users"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "RegistrationID": {
+      "type": "integer"
+    },
+    "FullNameValue": {
+      "type": "string"
+    },
+    "EstablishmentID": {
+      "type": "integer"
+    },
+    "Username": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    }
+  }
+}

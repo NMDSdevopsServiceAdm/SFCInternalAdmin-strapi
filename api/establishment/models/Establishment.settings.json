@@ -1,0 +1,42 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "establishment",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "PK": {
+      "type": "integer",
+      "unique": true,
+      "required": true
+    },
+    "UID": {
+      "maxLength": 36,
+      "required": true,
+      "unique": true,
+      "minLength": 36,
+      "type": "string"
+    },
+    "NMDSID": {
+      "required": true,
+      "type": "string"
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Postcode": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "string"
+    },
+    "MainService": {
+      "type": "string"
+    }
+  }
+}

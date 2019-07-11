@@ -1,0 +1,63 @@
+{
+  "connection": "default",
+  "collectionName": "qualification",
+  "info": {
+    "name": "qualification",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "ID": {
+      "type": "integer",
+      "unique": true,
+      "required": true
+    },
+    "Seq": {
+      "type": "integer",
+      "required": true
+    },
+    "Group": {
+      "required": true,
+      "type": "string"
+    },
+    "Title": {
+      "required": true,
+      "type": "string"
+    },
+    "Code": {
+      "type": "integer",
+      "required": true
+    },
+    "From": {
+      "type": "date"
+    },
+    "Until": {
+      "type": "date"
+    },
+    "Level": {
+      "type": "string",
+      "maxLength": 2,
+      "minLength": 1
+    },
+    "MultipleLevel": {
+      "type": "boolean"
+    },
+    "RelevantToSocialCare": {
+      "type": "boolean"
+    },
+    "AnalysisFileCode": {
+      "maxLength": 20,
+      "required": true,
+      "minLength": 1,
+      "type": "string"
+    },
+    "BUDI": {
+      "type": "string"
+    }
+  }
+}
