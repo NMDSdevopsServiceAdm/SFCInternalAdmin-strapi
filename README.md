@@ -1,3 +1,7 @@
+# strapi
+
+A quick description of strapi.
+=======
 
 Strapi configuration.
 
@@ -7,5 +11,4 @@ Establishments
 
 Contains api/models with REST calls on change for outgoing Reference Data;
 Qualifications
-
 
