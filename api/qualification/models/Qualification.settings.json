@@ -19,7 +19,8 @@
     },
     "Seq": {
       "type": "integer",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "Group": {
       "required": true,
@@ -30,8 +31,7 @@
       "type": "string"
     },
     "Code": {
-      "type": "integer",
-      "required": true
+      "type": "integer"
     },
     "From": {
       "type": "date"
@@ -40,9 +40,7 @@
       "type": "date"
     },
     "Level": {
-      "type": "string",
-      "maxLength": 2,
-      "minLength": 1
+      "type": "string"
     },
     "MultipleLevel": {
       "type": "boolean"
@@ -51,10 +49,8 @@
       "type": "boolean"
     },
     "AnalysisFileCode": {
-      "maxLength": 20,
-      "required": true,
-      "minLength": 1,
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "BUDI": {
       "type": "string"

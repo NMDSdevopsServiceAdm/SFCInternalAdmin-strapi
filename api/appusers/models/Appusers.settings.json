@@ -15,16 +15,76 @@
     "RegistrationID": {
       "type": "integer"
     },
-    "FullNameValue": {
-      "type": "string"
-    },
-    "EstablishmentID": {
-      "type": "integer"
-    },
     "Username": {
       "unique": true,
       "required": true,
       "type": "string"
+    },
+    "EstablishmentUID": {
+      "type": "string"
+    },
+    "EstablishmentName": {
+      "type": "string"
+    },
+    "NMDSID": {
+      "type": "string"
+    },
+    "Postcode": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "string"
+    },
+    "SecurityQuestion": {
+      "type": "string"
+    },
+    "SecurityAnswer": {
+      "type": "string"
+    },
+    "IsBlocked": {
+      "type": "boolean"
+    },
+    "PasswdLastChanged": {
+      "type": "date"
+    },
+    "LastLoggedIn": {
+      "type": "date"
+    },
+    "DataSource": {
+      "enum": [
+        "local",
+        "dev",
+        "staging"
+      ],
+      "type": "enumeration"
+    },
+    "Role": {
+      "enum": [
+        "Read",
+        "Edit"
+      ],
+      "type": "enumeration"
+    },
+    "IsPrimary": {
+      "type": "boolean"
+    },
+    "LastUpdated": {
+      "type": "date"
+    },
+    "UID": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "PK": {
+      "type": "integer"
     }
   }
 }

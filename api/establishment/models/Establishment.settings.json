@@ -1,12 +1,15 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "establishment",
   "info": {
     "name": "establishment",
     "description": ""
   },
   "options": {
-    "timestamps": true
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "PK": {
@@ -37,6 +40,62 @@
     },
     "MainService": {
       "type": "string"
+    },
+    "DataSource": {
+      "enum": [
+        "local",
+        "dev",
+        "staging"
+      ],
+      "type": "enumeration"
+    },
+    "LocationID": {
+      "type": "string"
+    },
+    "ProvID": {
+      "type": "text"
+    },
+    "IsRegulated": {
+      "type": "boolean"
+    },
+    "ShareWithCQC": {
+      "type": "boolean"
+    },
+    "ShareWithLA": {
+      "type": "boolean"
+    },
+    "IsParent": {
+      "type": "boolean"
+    },
+    "IsSub": {
+      "type": "boolean"
+    },
+    "ParentUID": {
+      "type": "string"
+    },
+    "WeightedCompletion": {
+      "type": "integer"
+    },
+    "OverallWDFEligibility": {
+      "type": "date"
+    },
+    "LastWDFEligible": {
+      "type": "date"
+    },
+    "EmployerType": {
+      "enum": [
+        "Private",
+        "Voluntary or Charity",
+        "Other",
+        "Local Authority"
+      ],
+      "type": "enumeration"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "LastUpdated": {
+      "type": "date"
     }
   }
 }
