@@ -1,4 +1,6 @@
 {
   "myCustomConfiguration": "This configuration is accessible through strapi.config.environments.development.myCustomConfiguration",
-  "skillsBackendURL":"http://localhost:8081/"
+  "ssssskillsBackendURL":"http://localhost:8081/",
+  "skillsBackendURL":"https://sfcdev.cloudapps.digital/api/",
+  "jwt_iss":"sfcdev.cloudapps.digital"
 }
