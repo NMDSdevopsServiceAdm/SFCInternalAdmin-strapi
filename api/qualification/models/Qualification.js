@@ -9,14 +9,16 @@ const skillsend = require('skillsend/SkillSend');
 module.exports = {
 
   afterUpdate: async (model,result) => {
-    skillsend.afterUpdate(__filename,model,result);
+    await skillsend.afterUpdate(__filename,model,result);
   },
 
-  beforeCreate: async (model) => {
-    skillsend.beforeCreate(__filename,model);
+  afterCreate: async (model) => {
+    await skillsend.postQualification(model);
   },
   
-  beforeUpdate: async (model) => {
-    skillsend.beforeUpdate(__filename,model);
+  afterUpdate: async (model) => {
+    await skillsend.putQualification(model._update);
   }
 };
+
+
