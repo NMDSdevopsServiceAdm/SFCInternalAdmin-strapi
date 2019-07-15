@@ -1,6 +1,6 @@
 'use strict';
 
-const skillsend = require('skillsend/SkillSend');
+const skillsend = require('../../../utils/skillsend/SkillSend');
 
 /**
  * Lifecycle callbacks for the `Cmdmodel` model.
