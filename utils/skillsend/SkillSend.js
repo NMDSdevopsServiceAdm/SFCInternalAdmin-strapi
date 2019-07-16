@@ -84,6 +84,7 @@ const msgTransforms = {
 module.exports = {
 
   postContentType: async (callingFile, req) => {
+    const IDPresent=req.ID;
     const type=parseType(callingFile);
 
     var msgBody=JSON.parse(JSON.stringify(msgTransforms[type](req)));
@@ -108,12 +109,16 @@ module.exports = {
        );
 
        if (apiResponse.status === 200) {
-         if(apiResponse.data.id) {
+        if(apiResponse.data.id) {
            strapi.log.info('ASC WDS accepted the new '+type+' assigned key '+apiResponse.data.id);
            req.ID=apiResponse.data.id;        
          } else {
-          strapi.log.error('ASC WDS accepted the new '+type+' with no key');
-          throw new Error('ASC WDS API no id returned');
+           if(!IDPresent) {
+            strapi.log.error('ASC WDS accepted the new '+type+' with no key');
+            throw new Error('ASC WDS API no id returned');
+           } else {
+             console.warn('ID present in request. Either pre-backend fix or bulk load');
+           }
         }
         return;
        } else {
