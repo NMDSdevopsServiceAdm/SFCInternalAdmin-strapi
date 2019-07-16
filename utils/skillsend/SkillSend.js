@@ -197,5 +197,49 @@ module.exports = {
        // just ignore this call; it's the follow to a create and therefore no properties other than "id"
        return;
     }
+
+
+    // map from Qualificatoin content type to API availableQualification JSON body
+    const apiQualification = {
+      //id: req.ID,
+      seq: req.Seq,
+      title: req.Title,
+      group: req.Group,
+      code: req.Code,
+      from: req.From,
+      until: req.Until,
+      level: req.Level,
+      multipleLevel: req.MultipleLevel ? req.MultipleLevel : false,
+      socialCareRelevant: req.RelevantToSocialCare ? req.RelevantToSocialCare : false,
+      analysisFileCode: req.AnalysisFileCode
+    };
+
+    const putQualificationUrl = `${strapi.config.currentEnvironment.skillsBackendURL}availableQualifications/${req.ID}`;
+    strapi.log.info(`ASC WDS qual url: ${putQualificationUrl}`);
+
+    // invoke API
+    try { 
+       const apiResponse = await axios(
+          {
+            method: 'put',
+            url: putQualificationUrl,
+            headers: {
+              Authorization: `Bearer ${JWT.ASCWDS_JWT()}`
+            },
+            data: apiQualification,
+          }
+       );
+
+       if (apiResponse.status === 200) {
+          strapi.log.info('ASC WDS accepted the updated qualificatoin');
+          return;
+       } else {
+          strapi.log.error('ASC WDS rejected the updated qualification');
+          return;
+       }
+    } catch (err) {
+       strapi.log.error("ERROR: ", err);
+       throw new Error('Failed to update ASC WDS API');
+    }
   }
-}
+};
