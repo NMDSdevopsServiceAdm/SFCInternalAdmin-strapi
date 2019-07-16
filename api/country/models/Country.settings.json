@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "country",
+  "info": {
+    "name": "country",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "ID": {
+      "type": "integer",
+      "unique": true
+    },
+    "Seq": {
+      "type": "integer",
+      "unique": true,
+      "required": true
+    },
+    "Country": {
+      "required": true,
+      "unique": true,
+      "type": "string"
+    }
+  }
+}
