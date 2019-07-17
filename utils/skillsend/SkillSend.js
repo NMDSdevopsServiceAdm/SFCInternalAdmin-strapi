@@ -4,9 +4,9 @@ const JWT = require('./JWT');
 const axios = require('axios');
 
 const endpointTransforms = {
-  Qualification: "Qualifications",
-  Country: "Countries",
-  Nationality: "Nationalities"
+  Qualification: "availableQualifications",
+  Country: "country",
+  Nationality: "nationality"
 }
 
 const msgTransforms = {
@@ -92,7 +92,7 @@ module.exports = {
     msgBody.$setOnInsert=undefined;
 
     const endpointType=endpointTransforms[type];
-    const postUrl = `${strapi.config.currentEnvironment.skillsBackendURL}available${endpointType}`;
+    const postUrl = `${strapi.config.currentEnvironment.skillsBackendURL}${endpointType}`;
     strapi.log.info(`ASC WDS ${type} url: ${postUrl}`);
 
     // invoke API
@@ -145,7 +145,7 @@ module.exports = {
     msgBody.ID=undefined;
 
     const endpointType=endpointTransforms[type];
-    const putUrl = `${strapi.config.currentEnvironment.skillsBackendURL}available${endpointType}/${req.ID}`;
+    const putUrl = `${strapi.config.currentEnvironment.skillsBackendURL}${endpointType}/${req.ID}`;
     strapi.log.info(`ASC WDS ${type} url: ${putUrl}`);
 
     // invoke API
