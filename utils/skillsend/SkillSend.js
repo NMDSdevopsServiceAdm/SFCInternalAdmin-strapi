@@ -181,8 +181,14 @@ module.exports = {
        );
 
        if (apiResponse.status === 200) {
-          strapi.log.info('ASC WDS accepted the new qualificatoin');
-          return;
+         if(apiResponse.data.id) {
+           strapi.log.info('ASC WDS accepted the new qualification assigned key '+apiResponse.data.id);
+           req.ID=apiResponse.data.id;        
+         } else {
+          strapi.log.error('ASC WDS accepted the new qualification with no key');
+          throw new Error('ASC WDS API no id returned');
+        }
+        return;
        } else {
           strapi.log.error('ASC WDS rejected the new qualification');
           return;
