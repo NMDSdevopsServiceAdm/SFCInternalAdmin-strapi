@@ -1,10 +1,15 @@
 'use strict';
 
+/**
+ * Lifecycle callbacks for the `Country`'use strict';
+ */
+
 const skillsend = require('../../../utils/skillsend/SkillSend');
 
 /**
- * Lifecycle callbacks for the `Cmdmodel` model.
+ * Read the documentation () to implement custom service functions
  */
+
 
 module.exports = {
 
