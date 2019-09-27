@@ -29,14 +29,16 @@ const msgTransforms = {
       return {
         id: req.ID,
         seq: req.Seq,
-        country: req.Country
+        country: req.Country,
+        budi: req.BUDI
       };
     },
     Nationality: function (req) {
       return {
         id: req.ID,
         seq: req.Seq,
-        nationality: req.Nationality
+        nationality: req.Nationality,
+        budi: req.BUDI
       };
     }
   };

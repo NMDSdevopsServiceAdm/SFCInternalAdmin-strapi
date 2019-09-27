@@ -25,6 +25,9 @@
       "required": true,
       "unique": true,
       "type": "string"
+    },
+    "BUDI": {
+      "type": "string"
     }
   }
 }
